@@ -43,7 +43,7 @@ p2 = Person('John', 'Doe', 30, 'Chile', "Valdivia")
 print(p2.person_info()) # John Doe is 30 years old. He lives in Valdivia, Chile
 
 class Person:
-    def __init__(self, firstname='Gerard', lastname='Bourguett', age=30, country='Chile', city='Valdivia'):
+    def __init__(self, firstname='Gerard', lastname='Bourguett', age=30, country='Chile', city='Valdivia'):  # noqa: E501
         self.firstname = firstname
         self.lastname = lastname
         self.age = age
@@ -52,17 +52,17 @@ class Person:
         self.skills = []
 
     def person_info(self):
-        return f'{self.firstname} {self.lastname} is {self.age} years old. He lives in {self.city}, {self.country}'
+        return f'{self.firstname} {self.lastname} is {self.age} years old. He lives in {self.city}, {self.country}'  # noqa: E501
     def add_skill(self, skill):
         self.skills.append(skill)
 
 p1 = Person()
-print(p1.person_info()) # Gerard Bourguett is 30 years old. He lives in Valdivia, Chile    
+print(p1.person_info()) # Gerard Bourguett is 30 years old. He lives in Valdivia, Chile
 p1.add_skill('HTML')
 p1.add_skill('CSS')
 p1.add_skill('JavaScript')
 p2 = Person('John', 'Doe', 30, 'Nomanland', 'Noman city')
-print(p2.person_info()) # John Doe is 30 years old. He lives in Noman city, Nomanland      
+print(p2.person_info()) # John Doe is 30 years old. He lives in Noman city, Nomanland # noqa: E501
 print(p1.skills) # ['HTML', 'CSS', 'JavaScript']
 print(p2.skills) # []
         
@@ -73,13 +73,13 @@ class Student(Person):
 
 s1 = Student('Juan', 'Martinez', 35, 'Chile', 'Graneros')
 s2 = Student('Camilo', 'Perez', 34, 'Chile', 'Puente Alto')
-print(s1.person_info()) # Juan Martinez is 35 years old. He lives in Graneros, Chile       
+print(s1.person_info()) # Juan Martinez is 35 years old. He lives in Graneros, Chile         # noqa: E501
 s1.add_skill('Javascript')
 s1.add_skill('React')
 s1.add_skill('Python')
 print(s1.skills) # ['Javascript', 'React', 'Python']
 
-print(s2.person_info()) # Camilo Perez is 34 years old. He lives in Puente Alto, Chile     
+print(s2.person_info()) # Camilo Perez is 34 years old. He lives in Puente Alto, Chile       # noqa: E501
 s2.add_skill('Organizing')
 s2.add_skill('Marketing')
 s2.add_skill('Digital Marketing')
@@ -97,13 +97,13 @@ class Student(Person):
 
 s1 = Student('Eyob', 'Yetayeh', 30, 'Finland', 'Helsinki','male')
 s2 = Student('Lidiya', 'Teklemariam', 28, 'Finland', 'Espoo', 'female')
-print(s1.person_info()) # Eyob Yetayeh is 30 years old. He lives in Helsinki, Finland.     
+print(s1.person_info()) # Eyob Yetayeh is 30 years old. He lives in Helsinki, Finland.       # noqa: E501
 s1.add_skill('JavaScript')
 s1.add_skill('React')
 s1.add_skill('Python')
 print(s1.skills) # ['JavaScript', 'React', 'Python']
 
-print(s2.person_info()) # Lidiya Teklemariam is 28 years old. She lives in Espoo, Finland. 
+print(s2.person_info()) # Lidiya Teklemariam is 28 years old. She lives in Espoo, Finland.   # noqa: E501
 s2.add_skill('Organizing')
 s2.add_skill('Marketing')
 s2.add_skill('Digital Marketing')
